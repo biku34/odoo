@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>ReWear - Register</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="container">
+    <form id="registerForm">
+      <h2>ReWear - Register</h2>
+      <p class="subtitle">Join the sustainable fashion movement</p>
+
+      <div class="form-group">
+        <label for="name">Full Name</label>
+        <input type="text" id="name" name="name" required />
+      </div>
+
+      <div class="form-group">
+        <label for="email">Email Address</label>
+        <input type="email" id="email" name="email" required />
+      </div>
+
+      <div class="form-group">
+        <label for="password">Password</label>
+        <input type="password" id="password" name="password" required />
+      </div>
+
+      <div class="form-group">
+        <label for="confirmPassword">Confirm Password</label>
+        <input type="password" id="confirmPassword" name="confirmPassword" required />
+      </div>
+
+      <button type="submit" id="submitBtn">Register</button>
+      <p id="message"></p>
+    </form>
+  </div>
+
+  <script>
+    const form = document.getElementById('registerForm');
+    const message = document.getElementById('message');
+    const submitBtn = document.getElementById('submitBtn');
+
+    form.addEventListener('submit', async (e) => {
+      e.preventDefault();
+      message.textContent = '';
+      submitBtn.disabled = true;
+
+      const name = form.name.value.trim();
+      const email = form.email.value.trim();
+      const password = form.password.value;
+      const confirmPassword = form.confirmPassword.value;
+
+      if (password !== confirmPassword) {
+        message.textContent = "❌ Passwords do not match";
+        submitBtn.disabled = false;
+        return;
+      }
+
+      message.textContent = "⏳ Registering...";
+
+      try {
+        const res = await fetch('http://localhost:5000/register', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({ name, email, password })
+        });
+        const data = await res.json();
+
+        if (res.ok) {
+          message.textContent = "✅ Registration successful! Redirecting...";
+          setTimeout(() => {
+            window.location.href = 'https://www.google.com'; // placeholder redirect
+          }, 2000);
+        } else {
+          message.textContent = `❌ ${data.message}`;
+        }
+      } catch (err) {
+        message.textContent = "⚠️ Server error. Try again.";
+      } finally {
+        submitBtn.disabled = false;
+      }
+    });
+  </script>
+</body>
+</html>
