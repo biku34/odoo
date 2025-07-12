@@ -60,9 +60,6 @@ Video - https://drive.google.com/file/d/1K4typ5_KMh4ycAUKSwRvuUbAVii-RopT/view?u
 **AI & APIs**  
 `Hugging Face API` `xAI (planned)`
 
-**Storage & Hosting**  
-`Cloudinary / Firebase / Supabase (mention your exact stack)`
-
 ---
 
 ## 🗂️ Database Schema Overview
