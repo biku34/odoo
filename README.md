@@ -5,9 +5,76 @@ Bikram Sadhukhan - bikramsadhukhan505@gmail.com
 Hetal Sapkale - hetal.dfis242622@nfsu.ac.in 
 Jash Parekh - parekhjash1@gmail.com 
 
-Name : Hetal Sapkale
-Developed a user registration system using HTML, CSS, and PostgreSQL for secure data handling. Implemented an admin panel in Python with Flask, enabling moderation and approval workflows. Integrated data visualization using Chart.js and Matplotlib to track user statistics and item listings. Structured the backend with modular Python scripts and SQL integration.
+# 👕 ReWear – A Smart Clothing Exchange Platform
 
+ReWear is a web-based platform that encourages sustainable fashion by enabling users to swap, donate, or redeem clothing items. Designed with a focus on usability, modular backend, and clean interface, ReWear ensures secure data handling, real-time interaction, and visual insights into platform activity.
 
-Name : Jash Parekh 
-Developed features a web-based clothing exchange system. Created a Flask backend with a MySQL database (rewear) for users, items, and images, with login and item detail APIs, integrated with a React frontend. Built a login page (app.js) with a #7c3aed and #a855f7 color scheme, authenticating users and linking to the Item Detail Page. Developed an Item Detail Page (ItemDetailPage.js) with an image gallery and swap/redeem options. Guided database population and resolved MySQL connection issues. Created a standalone chatbot using HTML, CSS, and JavaScript with the Hugging Face API, estimating points for buying/selling clothes interactively. Addressed server setup issues at http://localhost:8000/. Future enhancements could include xAI API integration.
+## 🔗 Live Demo
+🌐 [Coming Soon or add your hosted URL]
+
+## 📸 Preview
+
+![Landing Page](screenshots/landing.png)
+![Admin Panel](screenshots/admin_panel.png)
+![Item Detail](screenshots/item_detail.png)
+
+---
+
+## 🚀 Key Features
+
+- 🛍️ **Browse & Add Items** – Users can list their clothing items with images and descriptions.
+- 🔐 **User Auth & Moderation** – Secure login system with admin approval workflows.
+- 📊 **Data Visualization** – Track user activity and item stats with Chart.js and Matplotlib.
+- 🤖 **Interactive Chatbot** – AI bot estimates points for items using Hugging Face API.
+- ☁️ **Cloud Storage** – Images and data hosted in the cloud for fast access & scalability.
+
+---
+
+## 🧠 Team Contributions
+
+### 👩‍💻 Hetal Sapkale
+- Built a secure user registration system with PostgreSQL.
+- Implemented an admin panel using Flask for user/item moderation.
+- Integrated data visualization with Chart.js and Matplotlib.
+- Structured backend with modular Python and SQL integration.
+
+### 👨‍💻 Jash Parekh
+- Developed a Flask backend with MySQL for users, items, and images.
+- Created a login system and item detail page using React.
+- Designed UI with vibrant color scheme `#7c3aed` & `#a855f7`.
+- Built a standalone chatbot using Hugging Face API and JavaScript.
+
+### 👨‍💻 Bikram Sadhukhan
+- Designed landing page and item upload form using HTML, CSS, and PHP.
+- Implemented SQL database for item and user data.
+- Ensured security with input sanitization and server-side validation.
+- Connected cloud storage for image and DB access.
+- Created a lightweight admin interface for item approvals.
+
+---
+
+## 🛠️ Tech Stack
+
+**Frontend**  
+`HTML` `CSS` `JavaScript` `React.js`
+
+**Backend**  
+`Python (Flask)` `PHP` `SQL` `PostgreSQL` `MySQL`
+
+**Data Visualization**  
+`Chart.js` `Matplotlib`
+
+**AI & APIs**  
+`Hugging Face API` `xAI (planned)`
+
+**Storage & Hosting**  
+`Cloudinary / Firebase / Supabase (mention your exact stack)`
+
+---
+
+## 🗂️ Database Schema Overview
+
+```sql
+Users(user_id, name, email, password_hash)
+Items(item_id, title, description, image_url, uploaded_by, status)
+SwapRequests(request_id, item_id, from_user, to_user, status)
