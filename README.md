@@ -9,14 +9,7 @@ Jash Parekh - parekhjash1@gmail.com
 
 ReWear is a web-based platform that encourages sustainable fashion by enabling users to swap, donate, or redeem clothing items. Designed with a focus on usability, modular backend, and clean interface, ReWear ensures secure data handling, real-time interaction, and visual insights into platform activity.
 
-## 🔗 Live Demo
-🌐 [Coming Soon or add your hosted URL]
-
-## 📸 Preview
-
-![Landing Page](screenshots/landing.png)
-![Admin Panel](screenshots/admin_panel.png)
-![Item Detail](screenshots/item_detail.png)
+Video - https://drive.google.com/file/d/1K4typ5_KMh4ycAUKSwRvuUbAVii-RopT/view?usp=sharing
 
 ---
 
@@ -74,7 +67,4 @@ ReWear is a web-based platform that encourages sustainable fashion by enabling u
 
 ## 🗂️ Database Schema Overview
 
-```sql
-Users(user_id, name, email, password_hash)
-Items(item_id, title, description, image_url, uploaded_by, status)
-SwapRequests(request_id, item_id, from_user, to_user, status)
+https://docs.google.com/document/d/1wDnqKj51FhF3y8zbJKmcj7OrK4VFjoFZHKJw1YtLn2s/edit?usp=sharing
