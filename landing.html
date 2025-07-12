@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>ReWear - Community Clothing Exchange</title>
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --dark: #1f1f2e;
+      --light: #ffffff;
+      --highlight: #9e4ed2;
+      --subtle: #f5f5fc;
+      --accent: #c084fc;
+      --radius: 14px;
+      --shadow: 0 8px 30px rgba(0, 0, 0, 0.1);
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: 'Manrope', sans-serif;
+      background-color: var(--subtle);
+      color: var(--dark);
+      line-height: 1.7;
+    }
+
+    header {
+      background: var(--dark);
+      color: var(--light);
+      padding: 5rem 2rem 4rem;
+      text-align: center;
+      border-bottom-left-radius: 40px;
+      border-bottom-right-radius: 40px;
+    }
+
+    header h1 {
+      font-size: 3rem;
+      margin-bottom: 1rem;
+      font-weight: 700;
+    }
+
+    header p {
+      font-size: 1.15rem;
+      max-width: 700px;
+      margin: 0 auto;
+      opacity: 0.85;
+    }
+
+    .cta-buttons {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1rem;
+      justify-content: center;
+      margin-top: 2.5rem;
+    }
+
+    .cta-buttons a {
+      padding: 0.9rem 1.8rem;
+      background: var(--highlight);
+      color: white;
+      font-weight: 600;
+      border-radius: var(--radius);
+      text-decoration: none;
+      transition: 0.3s;
+      box-shadow: var(--shadow);
+    }
+
+    .cta-buttons a:hover {
+      background: var(--accent);
+      transform: scale(1.05);
+    }
+
+    section {
+      padding: 4rem 2rem;
+      max-width: 1200px;
+      margin: 0 auto;
+      text-align: center;
+    }
+
+    h2 {
+      font-size: 2.4rem;
+      margin-bottom: 1rem;
+      color: var(--highlight);
+    }
+
+    p.section-desc {
+      max-width: 800px;
+      margin: 0 auto 3rem;
+      color: #555;
+      font-size: 1.05rem;
+    }
+
+    .carousel {
+      display: flex;
+      overflow-x: auto;
+      gap: 1.5rem;
+      padding-bottom: 1rem;
+      scroll-behavior: smooth;
+    }
+
+    .carousel::-webkit-scrollbar {
+      height: 6px;
+    }
+
+    .carousel::-webkit-scrollbar-thumb {
+      background: var(--highlight);
+      border-radius: 4px;
+    }
+
+    .item-card {
+      background: var(--light);
+      min-width: 250px;
+      border-radius: var(--radius);
+      box-shadow: var(--shadow);
+      overflow: hidden;
+      transition: 0.3s;
+    }
+
+    .item-card:hover {
+      transform: translateY(-6px);
+    }
+
+    .item-card img {
+      width: 100%;
+      height: 220px;
+      object-fit: cover;
+    }
+
+    .item-card .info {
+      padding: 1rem;
+    }
+
+    .item-card h3 {
+      font-size: 1.1rem;
+      color: var(--highlight);
+      margin-bottom: 0.4rem;
+    }
+
+    .benefits-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 2rem;
+    }
+
+    .benefit {
+      background: var(--light);
+      padding: 2rem;
+      border-radius: var(--radius);
+      box-shadow: var(--shadow);
+      text-align: left;
+      transition: 0.3s;
+    }
+
+    .benefit:hover {
+      background: #f3e8fd;
+      transform: translateY(-4px);
+    }
+
+    .benefit h4 {
+      font-size: 1.25rem;
+      margin-bottom: 0.5rem;
+      color: var(--highlight);
+    }
+
+    footer {
+      background: #1e1e2d;
+      color: #ccc;
+      text-align: center;
+      padding: 2rem;
+      font-size: 0.9rem;
+    }
+
+    @media (max-width: 768px) {
+      header h1 {
+        font-size: 2.2rem;
+      }
+
+      h2 {
+        font-size: 2rem;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>ReWear: Swap Fashion Sustainably</h1>
+    <p>Join the movement to give clothes a second chance. Swap, redeem, and refresh your wardrobe effortlessly.</p>
+    <div class="cta-buttons">
+      <a href="#">Start Swapping</a>
+      <a href="#">Browse Items</a>
+      <a href="#">List an Item</a>
+    </div>
+  </header>
+
+  <section>
+    <h2>🌿 What is ReWear?</h2><p><hr></p>
+    <p class="section-desc">ReWear is your community-powered wardrobe refresh hub. Say goodbye to fast fashion waste and hello to curated secondhand style exchanges.</p>
+  </section>
+
+  <!-- ✅ Category Buttons Section Starts -->
+  <section>
+    <h2>Explore by Category</h2>
+    <div class="cta-buttons" style="margin-top: 1.5rem;">
+      <a href="#">👕 Shirts & Tees</a>
+      <a href="#">👗 Dresses & Ethnic</a>
+      <a href="#">🧥 Jackets & Hoodies</a>
+      <a href="#">👖 Bottomwear</a>
+    </div>
+  </section>
+  <!-- ✅ Category Buttons Section Ends -->
+
+  <section>
+    <h2>Featured Items</h2>
+    <div class="carousel">
+      <div class="item-card">
+        <img src="https://m.media-amazon.com/images/I/619IXUpeP2L._UY1100_.jpg" alt="Item">
+        <div class="info">
+          <h3>Vintage Tee</h3>
+          <p>Size M • Like New</p>
+        </div>
+      </div>
+      <div class="item-card">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTRm2JuDokFHK4I2WvXFc8vHGi_xeczt7ud7A&s" alt="Item">
+        <div class="info">
+          <h3>Leather Jacket</h3>
+          <p>Size L • Gently Used</p>
+        </div>
+      </div>
+      <div class="item-card">
+        <img src="https://assets.myntassets.com/w_412,q_60,dpr_2,fl_progressive/assets/images/17985408/2022/5/2/84b49f1e-9a74-4bd4-8223-7d18fd9026cc1651490129406-SASSAFRAS-Women-Jumpsuit-6101651490128772-1.jpg" alt="Item">
+        <div class="info">
+          <h3>JumpSuit</h3>
+          <p>Size L • Used</p>
+        </div>
+      </div>
+      <div class="item-card">
+        <img src="https://images.cbazaar.com/images/black-faux-georgette-chaniya-choli-with-artful-embroidery-kutch-work-ghswe14-u.jpg" alt="Item">
+        <div class="info">
+          <h3>Traditional Wear</h3>
+          <p>Size XL • Likely New</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <h2>Why Choose Us?</h2>
+    <div class="benefits-grid">
+      <div class="benefit">
+        <h4>Points-based Redemption</h4><hr>
+        <p>Earn points when you list and exchange items. Redeem them to get what you love.</p>
+      </div>
+      <div class="benefit">
+        <h4>Direct Swaps</h4><hr>
+        <p>Connect with swappers near you and exchange fashion directly and freely.</p>
+      </div>
+      <div class="benefit">
+        <h4>Sustainable Living</h4><hr>
+        <p>Make eco-conscious choices by circulating clothes instead of trashing them.</p>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    &copy; 2025 ReWear — Fashion with a Future 🌱
+  </footer>
+</body>
+</html>
